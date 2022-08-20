@@ -22,17 +22,12 @@ pipeline {
             steps {
             withMaven(maven : 'Default_Maven3')
             {
-                sh "mvn clean test"
+                sh "mvn clean install"
                 }
                 
             }
         }
-        stage("code_deploy") {
-            steps {
-                sh "mvn install"
-                
-            }
-        }
+        
     
     }
 }

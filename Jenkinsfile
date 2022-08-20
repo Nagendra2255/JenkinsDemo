@@ -29,7 +29,7 @@ pipeline {
         }
         stage("code_deploy") {
             steps {
-                sh "mvn  deploy"
+                sh "mvn install"
                 
             }
         }
